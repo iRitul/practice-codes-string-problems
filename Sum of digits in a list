@@ -1,0 +1,22 @@
+''' Write a function called integer_lengths() that takes a list of integers and returns the sum of all their
+lengths. For instance, given [2,44,532,3,44,22], the sum of the lengths is 1 + 2 + 3 + 1 + 2 + 2 = 11. '''
+
+
+lst = []
+
+num = int(input('How Many Number:'))
+for i in range(num):
+    numbers = str(input('Enter number '))
+    lst.append(numbers)
+
+    
+def integer_length(lst):
+    sum = 0
+    lengths = [len(i) for i in lst]
+
+    for i in range(len(lengths)):
+        sum = sum + lengths[i]
+    return sum
+
+    
+print(integer_length(lst))
