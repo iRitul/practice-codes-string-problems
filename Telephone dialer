@@ -1,0 +1,31 @@
+''' On telephones, digits correspond to letters, according to the table below.
+
+ Write a function called telephone_match() that determines if a numerical phone number num matches the string s according to the table below.
+
+ For instance, if num is 468-3437 and s is INTEGER, then the function would return
+true because each letter in s matches the corresponding number in num.
+2 ABC
+3 DEF
+4 GHI
+5 JKL
+6 MNO
+7 PQRS
+8 TUV
+9 WXYZ '''
+
+
+dict = {2:'abc',3:'def',4:'ghi',5:'jkl',6:'mno',7:'pqrs',8:'tuv',9:'wxyz'}
+num=list(input())
+s=input()
+x=list(s)
+count=0
+if len(num)== len(x):
+    for i in range(len(x)):
+        if(x[i] in dict[i+2]):
+            count=count+1
+        else:
+            print("false")
+if len(num)==count:
+    print("true")
+else:
+    print("false")
